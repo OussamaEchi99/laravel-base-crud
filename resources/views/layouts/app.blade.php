@@ -15,8 +15,8 @@
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link" href="{{ route('comics.index') }}">Lista tipi di pasta</a>
-                  <a class="nav-link" href="{{ route('comics.create') }}">Crea tipo di pasta</a>
+                  <a class="nav-link" href="{{ route('comics.index') }}">Comics List</a>
+                  <a class="nav-link" href="{{ route('comics.create') }}">Create a new DC Comics</a>
                 </div>
               </div>
             </div>

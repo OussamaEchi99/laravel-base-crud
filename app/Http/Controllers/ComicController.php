@@ -43,6 +43,8 @@ class ComicController extends Controller
     {
         $form_data = $request->all();
 
+        $request->validate($this->validationRules());
+
         $new_comic = new Comic();
         $new_comic->fill($form_data);
         $new_comic->save();
@@ -99,5 +101,16 @@ class ComicController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    protected function validationRules() {
+        return [
+            'title' => 'required|max:70',
+            'description' => 'required|min:10|max:60000|nullable',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:6',
+            'sale_date' => 'required|max:10',
+            'type' => 'required|max:30'
+        ];
     }
 }
